@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IE">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -153,8 +153,7 @@
           <h2 class="text-center fade-in">Send a Message</h2>
           <p class="text-center content-width fade-in">If you prefer, you can use the form below to get in touch. I'll respond as soon as I can.</p>
 
-          <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
-          <form class="contact-form fade-in" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form class="contact-form fade-in" id="contact-form">
 
             <div class="form-group">
               <label for="name">Your Name *</label>
@@ -174,15 +173,15 @@
             <div class="form-group">
               <label>Preferred Contact Method</label>
               <div class="form-radio-group">
-                <label class="radio-label">
+                <label class="form-radio">
                   <input type="radio" name="contact_method" value="Email" checked>
                   <span>Email</span>
                 </label>
-                <label class="radio-label">
+                <label class="form-radio">
                   <input type="radio" name="contact_method" value="Phone">
                   <span>Phone</span>
                 </label>
-                <label class="radio-label">
+                <label class="form-radio">
                   <input type="radio" name="contact_method" value="Text">
                   <span>Text</span>
                 </label>
@@ -310,8 +309,9 @@
 
   <!-- Cookie Notice -->
   <div class="cookie-notice" id="cookie-notice" role="dialog" aria-label="Cookie consent">
-    <p>This website uses cookies to ensure you get the best experience.</p>
-    <button class="btn btn-primary" id="cookie-accept">Accept</button>
+    <p>This website uses local storage to remember your preferences.</p>
+    <button class="btn btn-primary" id="cookie-accept">OK</button>
+    <button class="btn btn-secondary cookie-decline" id="cookie-decline">No thanks</button>
   </div>
 
   <script src="script.js"></script>

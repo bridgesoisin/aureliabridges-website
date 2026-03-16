@@ -102,15 +102,62 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- Cookie Notice --- */
   const cookieNotice = document.getElementById('cookie-notice');
   const cookieAccept = document.getElementById('cookie-accept');
+  const cookieDecline = document.getElementById('cookie-decline');
 
   if (cookieNotice && cookieAccept) {
-    if (!localStorage.getItem('ab-cookies-accepted')) {
+    if (!localStorage.getItem('ab-cookies-accepted') && !localStorage.getItem('ab-cookies-declined')) {
       setTimeout(() => cookieNotice.classList.add('visible'), 1500);
     }
 
     cookieAccept.addEventListener('click', () => {
       localStorage.setItem('ab-cookies-accepted', 'true');
       cookieNotice.classList.remove('visible');
+    });
+
+    if (cookieDecline) {
+      cookieDecline.addEventListener('click', () => {
+        localStorage.setItem('ab-cookies-declined', 'true');
+        cookieNotice.classList.remove('visible');
+      });
+    }
+  }
+
+  /* --- Contact Form (mailto) --- */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = contactForm.querySelector('#name').value;
+      const email = contactForm.querySelector('#email').value;
+      const phone = contactForm.querySelector('#phone').value || 'Not provided';
+      const contactMethod = contactForm.querySelector('input[name="contact_method"]:checked');
+      const contactMethodValue = contactMethod ? contactMethod.value : 'Not specified';
+      const message = contactForm.querySelector('#message').value || 'No message provided';
+
+      const subject = encodeURIComponent('Therapy Enquiry from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Preferred Contact Method: ' + contactMethodValue + '\n\n' +
+        'Message:\n' + message
+      );
+
+      window.location.href = 'mailto:counselling@aureliabridges.com?subject=' + subject + '&body=' + body;
+
+      // Brief note to the user
+      const note = document.createElement('p');
+      note.className = 'form-note';
+      note.textContent = 'Your email client should now open with your message. If it does not, please email counselling@aureliabridges.com directly.';
+      note.style.marginTop = '1rem';
+      note.style.color = 'var(--color-primary)';
+      note.style.fontWeight = '600';
+      const existingNote = contactForm.querySelector('.mailto-note');
+      if (!existingNote) {
+        note.classList.add('mailto-note');
+        contactForm.appendChild(note);
+      }
     });
   }
 
