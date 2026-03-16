@@ -1415,14 +1415,18 @@ button:focus-visible {
     background: var(--color-bg);
     box-shadow: var(--shadow-lg);
     transform: translateX(100%);
-    transition: transform var(--transition);
+    transition: transform var(--transition), visibility var(--transition);
     padding: 5rem 2rem 2rem;
     z-index: 105;
     overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .main-nav.active {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-list {

@@ -99,28 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => el.classList.add('visible'));
   }
 
-  /* --- Cookie Notice --- */
-  const cookieNotice = document.getElementById('cookie-notice');
-  const cookieAccept = document.getElementById('cookie-accept');
-  const cookieDecline = document.getElementById('cookie-decline');
-
-  if (cookieNotice && cookieAccept) {
-    if (!localStorage.getItem('ab-cookies-accepted') && !localStorage.getItem('ab-cookies-declined')) {
-      setTimeout(() => cookieNotice.classList.add('visible'), 1500);
-    }
-
-    cookieAccept.addEventListener('click', () => {
-      localStorage.setItem('ab-cookies-accepted', 'true');
-      cookieNotice.classList.remove('visible');
-    });
-
-    if (cookieDecline) {
-      cookieDecline.addEventListener('click', () => {
-        localStorage.setItem('ab-cookies-declined', 'true');
-        cookieNotice.classList.remove('visible');
-      });
-    }
-  }
 
   /* --- Contact Form (mailto) --- */
   const contactForm = document.getElementById('contact-form');
