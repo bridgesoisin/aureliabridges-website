@@ -611,6 +611,19 @@ p:last-child {
   text-align: center;
 }
 
+.welcome-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.welcome-layout .content-width {
+  flex: 1;
+}
+
 .welcome-section .content-width p {
   font-size: 1.125rem;
   color: var(--color-text-light);
@@ -619,6 +632,20 @@ p:last-child {
 .welcome-section .content-width p:first-of-type {
   font-size: 1.25rem;
   color: var(--color-text);
+}
+
+/* --- Therapist Photo --- */
+.therapist-photo {
+  flex-shrink: 0;
+  width: 280px;
+}
+
+.therapist-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
 }
 
 /* --- Areas Grid (Who I Work With) --- */
@@ -777,9 +804,24 @@ p:last-child {
 }
 
 /* --- About Page --- */
+.about-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.about-layout .therapist-photo {
+  width: 300px;
+  position: sticky;
+  top: calc(var(--header-height) + 2rem);
+}
+
 .about-content {
   max-width: var(--content-max);
   margin: 0 auto;
+  flex: 1;
 }
 
 .about-content p {
@@ -931,6 +973,32 @@ p:last-child {
 .location-details p {
   color: var(--color-text-light);
   font-size: 0.975rem;
+}
+
+/* --- Room Showcase --- */
+.room-showcase {
+  max-width: var(--content-max);
+  margin: 2rem auto 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.room-showcase img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.room-caption {
+  background: var(--color-card);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
 /* --- FAQ Accordion --- */
@@ -1294,6 +1362,18 @@ button:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .welcome-layout {
+    gap: 2rem;
+  }
+
+  .therapist-photo {
+    width: 240px;
+  }
+
+  .about-layout .therapist-photo {
+    width: 250px;
+  }
+
   .approach-brief {
     flex-direction: column;
   }
@@ -1404,6 +1484,31 @@ button:focus-visible {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .welcome-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .therapist-photo {
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-layout .therapist-photo {
+    width: 220px;
+    margin: 0 auto;
+    position: static;
+  }
+
+  .room-showcase img {
+    max-height: 350px;
   }
 
   .contact-form {
