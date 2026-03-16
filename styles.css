@@ -813,7 +813,7 @@ p:last-child {
 }
 
 .about-layout .therapist-photo {
-  width: 300px;
+  width: 380px;
   position: sticky;
   top: calc(var(--header-height) + 2rem);
 }
