@@ -4,16 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurelia Bridges | Psychotherapy &amp; Counselling in Waterford</title>
-  <meta name="description" content="Compassionate psychotherapy and counselling in Waterford. Aurelia Bridges M.Psy., MIACP offers individual, couples, and family therapy. In-person, online, and telephone sessions available.">
+  <meta name="description" content="Psychotherapy and counselling in Waterford with Aurelia Bridges, M.Psy., MIACP. Individual and couples therapy, in person, online and by telephone.">
   <link rel="canonical" href="https://aureliabridges.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Aurelia Bridges | Psychotherapy &amp; Counselling in Waterford">
-  <meta property="og:description" content="Compassionate psychotherapy and counselling in Waterford. Aurelia Bridges M.Psy., MIACP offers individual, couples, and family therapy. In-person, online, and telephone sessions available.">
+  <meta property="og:description" content="Psychotherapy and counselling in Waterford with Aurelia Bridges, M.Psy., MIACP. Individual and couples therapy, in person, online and by telephone.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aureliabridges.com/">
   <meta property="og:site_name" content="Aurelia Bridges Counselling &amp; Psychotherapy">
   <meta property="og:locale" content="en_IE">
+  <meta property="og:image" content="https://aureliabridges.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aurelia Bridges, M.Psy., MIACP — psychotherapy and counselling in Waterford">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Psychotherapy & Counselling in Waterford">
+  <meta name="twitter:description" content="Psychotherapy and counselling in Waterford with Aurelia Bridges, M.Psy., MIACP. Individual and couples therapy, in person, online and by telephone.">
+  <meta name="twitter:image" content="https://aureliabridges.com/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -29,23 +37,177 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Structured Data -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Aurelia Bridges Counselling & Psychotherapy",
-    "url": "https://aureliabridges.com",
-    "telephone": "+353879740021",
-    "email": "counselling@aureliabridges.com",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Unit 3, 1-2 Johnstown, Newtown",
-      "addressLocality": "Waterford",
-      "postalCode": "X91 WN1N",
-      "addressCountry": "IE"
-    }
+    "@graph": [
+      {
+        "@type": [
+          "ProfessionalService",
+          "MedicalBusiness"
+        ],
+        "@id": "https://aureliabridges.com/#practice",
+        "name": "Aurelia Bridges Counselling & Psychotherapy",
+        "url": "https://aureliabridges.com/",
+        "telephone": "+353879740021",
+        "email": "counselling@aureliabridges.com",
+        "image": "https://aureliabridges.com/og-image.jpg",
+        "logo": "https://aureliabridges.com/favicon-192.png",
+        "priceRange": "€80-€100",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Cash, Bank transfer, Revolut",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 3, 1-2 Johnstown, Newtown",
+          "addressLocality": "Waterford",
+          "addressRegion": "County Waterford",
+          "postalCode": "X91 WN1N",
+          "addressCountry": "IE"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Waterford"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "County Waterford"
+          },
+          {
+            "@type": "Country",
+            "name": "Ireland"
+          }
+        ],
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "English"
+        },
+        "founder": {
+          "@id": "https://aureliabridges.com/#aurelia"
+        },
+        "employee": {
+          "@id": "https://aureliabridges.com/#aurelia"
+        },
+        "sameAs": [
+          "https://share.google/IdFxIATfYvMDcbGNU",
+          "https://www.iacp.ie/",
+          "https://www.psychologicalsociety.ie/"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Therapy services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Individual psychotherapy"
+              },
+              "price": "80",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "80",
+                "priceCurrency": "EUR",
+                "referenceQuantity": {
+                  "@type": "QuantitativeValue",
+                  "value": 60,
+                  "unitCode": "MIN"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Couples psychotherapy"
+              },
+              "price": "100",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "100",
+                "priceCurrency": "EUR",
+                "referenceQuantity": {
+                  "@type": "QuantitativeValue",
+                  "value": 60,
+                  "unitCode": "MIN"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://aureliabridges.com/#aurelia",
+        "name": "Aurelia Bridges",
+        "honorificSuffix": "M.Psy., MIACP",
+        "jobTitle": "Psychotherapist",
+        "description": "Gestalt and integrative psychotherapist practising in Waterford, Ireland.",
+        "url": "https://aureliabridges.com/about.html",
+        "image": "https://aureliabridges.com/images/aurelia-profile.jpeg",
+        "worksFor": {
+          "@id": "https://aureliabridges.com/#practice"
+        },
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Irish Association for Counselling and Psychotherapy",
+            "alternateName": "IACP",
+            "url": "https://www.iacp.ie/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Psychological Society of Ireland",
+            "alternateName": "PSI",
+            "url": "https://www.psychologicalsociety.ie/"
+          }
+        ],
+        "knowsAbout": [
+          "Gestalt therapy",
+          "Psychotherapy",
+          "Counselling",
+          "Anxiety",
+          "Depression",
+          "Grief and bereavement",
+          "Couples therapy",
+          "Trauma and PTSD",
+          "Self-esteem",
+          "Burnout"
+        ],
+        "knowsLanguage": "English",
+        "sameAs": [
+          "https://share.google/IdFxIATfYvMDcbGNU"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aureliabridges.com/#website",
+        "url": "https://aureliabridges.com/",
+        "name": "Aurelia Bridges Counselling & Psychotherapy",
+        "inLanguage": "en-IE",
+        "publisher": {
+          "@id": "https://aureliabridges.com/#practice"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://aureliabridges.com/#page",
+        "url": "https://aureliabridges.com/",
+        "name": "Psychotherapy & Counselling in Waterford",
+        "description": "Psychotherapy and counselling in Waterford with Aurelia Bridges, M.Psy., MIACP. Individual and couples therapy, in person, online and by telephone.",
+        "isPartOf": {
+          "@id": "https://aureliabridges.com/#website"
+        },
+        "about": {
+          "@id": "https://aureliabridges.com/#practice"
+        },
+        "dateModified": "2026-08-26",
+        "inLanguage": "en-IE"
+      }
+    ]
   }
   </script>
 </head>
@@ -81,9 +243,9 @@
     <!-- HOME HERO -->
     <section class="home-hero page-hero">
       <div class="container">
-        <h1>Aurelia Bridges</h1>
-        <p class="hero-credentials">M.Psy., MIACP</p>
-        <p class="hero-tagline">Psychotherapy and Psychology Service in Waterford</p>
+        <p class="hero-eyebrow">Aurelia Bridges <span>M.Psy., MIACP</span></p>
+        <h1>Psychotherapy &amp; Counselling in Waterford</h1>
+        <p class="hero-tagline">Gestalt and integrative therapy for adults and couples &mdash; in person, online, or by telephone.</p>
         <p class="hero-subtagline">Compassionate support for life's challenges</p>
         <div class="hero-buttons">
           <a href="contact.html" class="btn btn-primary">Get in Touch</a>
@@ -99,10 +261,14 @@
         <hr class="section-divider">
         <div class="welcome-layout">
           <div class="therapist-photo fade-in">
-            <img src="images/aurelia-profile.jpeg" alt="Aurelia Bridges, psychotherapist" width="400" height="533" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="images/aurelia-profile-400.webp 400w, images/aurelia-profile-800.webp 800w" sizes="(max-width: 768px) 90vw, 400px">
+              <source type="image/jpeg" srcset="images/aurelia-profile-400.jpg 400w, images/aurelia-profile-800.jpg 800w" sizes="(max-width: 768px) 90vw, 400px">
+              <img src="images/aurelia-profile-400.jpg" alt="Aurelia Bridges, psychotherapist, Waterford" width="400" height="600" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="content-width fade-in">
-            <p>Welcome. I'm Aurelia Bridges, a psychologist and psychotherapist offering a safe, confidential space where you can explore what's troubling you and find your way forward.</p>
+            <p>Welcome. I'm Aurelia Bridges, an accredited psychotherapist offering a safe, confidential space where you can explore what's troubling you and find your way forward.</p>
             <p>Whatever you're going through — whether it's anxiety, a difficult relationship, grief, low self-esteem, or simply feeling stuck — you don't have to manage it alone. Therapy can offer you the support and clarity you need to make sense of your experiences and begin to live more fully.</p>
           </div>
         </div>
@@ -334,7 +500,7 @@
     <section class="section">
       <div class="container">
         <div class="crisis-section">
-          <h3>If You Are in Crisis</h3>
+          <h2 class="crisis-heading">If You Are in Crisis</h2>
           <p>Counselling is not an emergency service. If you or someone you know is in immediate danger, please contact one of the services below.</p>
           <div class="crisis-grid">
             <div class="crisis-item">
@@ -353,7 +519,7 @@
               <strong>Crisis Text:</strong> Text HELP to <a href="sms:50808">50808</a>
             </div>
             <div class="crisis-item">
-              <strong>Pieta House:</strong> <a href="tel:1800247247">1800 247 247</a>
+              <strong><a href="https://www.pieta.ie/" rel="noopener">Pieta House</a>:</strong> <a href="tel:1800247247">1800 247 247</a>
             </div>
           </div>
         </div>
@@ -369,6 +535,8 @@
         <a href="contact.html" class="btn btn-primary">Get in Touch</a>
       </div>
     </section>
+
+    <p class="last-reviewed">Last reviewed: August 2026</p>
 
   </main>
 
@@ -397,8 +565,8 @@
         <div class="footer-col">
           <h3>Professional</h3>
           <ul>
-            <li>Accredited Member IACP</li>
-            <li>Graduate Member PSI</li>
+            <li><a href="https://www.iacp.ie/" rel="noopener">Accredited Member IACP</a></li>
+            <li><a href="https://www.psychologicalsociety.ie/" rel="noopener">Graduate Member PSI</a></li>
             <li>Supervised Practice</li>
             <li>GDPR Compliant</li>
           </ul>
@@ -408,9 +576,9 @@
           <p>If you are in immediate danger, please contact:</p>
           <ul>
             <li><strong>Emergency:</strong> 999 / 112</li>
-            <li><strong>Samaritans:</strong> <a href="tel:116123">116 123</a> (24hr)</li>
+            <li><strong><a href="https://www.samaritans.org/ireland/" rel="noopener">Samaritans</a>:</strong> <a href="tel:116123">116 123</a> (24hr)</li>
             <li><strong>Crisis Text:</strong> Text HELP to <a href="sms:50808">50808</a></li>
-            <li><strong>Pieta House:</strong> <a href="tel:1800247247">1800 247 247</a></li>
+            <li><strong><a href="https://www.pieta.ie/" rel="noopener">Pieta House</a>:</strong> <a href="tel:1800247247">1800 247 247</a></li>
           </ul>
         </div>
       </div>
