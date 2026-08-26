@@ -1668,13 +1668,35 @@ button:focus-visible {
   margin-bottom: 2rem;
 }
 
-/* --- Tap targets: contact links must clear 48px on touch --- */
-@media (pointer: coarse) {
-  .footer-col a,
-  .crisis-item a {
+/* --- Tap targets ---
+   Contact links are the mobile conversion path, so every tel:/mailto:/sms:
+   link needs a 44px+ hit area. Padding plus an equal negative margin grows
+   the target without shifting the line box it sits in. */
+@media (max-width: 768px) {
+  a[href^="tel:"],
+  a[href^="mailto:"],
+  a[href^="sms:"] {
     display: inline-block;
-    min-height: 48px;
-    line-height: 48px;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+    margin-top: -0.85rem;
+    margin-bottom: -0.85rem;
+  }
+
+  .footer-col a[href^="tel:"],
+  .footer-col a[href^="mailto:"],
+  .footer-col a[href^="sms:"],
+  .crisis-item a {
+    padding-right: 0.5rem;
+  }
+
+  /* Contact cards are already large targets; don't double the padding. */
+  .contact-card a,
+  a.contact-card {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -1702,4 +1724,21 @@ button:focus-visible {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* --- Condition cards are links now; keep them looking like cards --- */
+a.area-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+a.area-card:hover,
+a.area-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+a.area-card h3 {
+  color: var(--color-primary);
 }
