@@ -1726,22 +1726,6 @@ button:focus-visible {
   border: 0;
 }
 
-/* --- Condition cards are links now; keep them looking like cards --- */
-a.area-card {
-  text-decoration: none;
-  color: inherit;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-a.area-card:hover,
-a.area-card:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-a.area-card h3 {
-  color: var(--color-primary);
-}
 
 /* --- Opening hours --- */
 .hours-block {
