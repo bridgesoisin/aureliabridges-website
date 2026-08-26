@@ -3,6 +3,8 @@
    Shared JavaScript
    ============================================= */
 
+document.documentElement.classList.add('js-enabled');
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Mobile Menu --- */
@@ -16,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-expanded', 'false');
     if (navOverlay) navOverlay.classList.remove('active');
     document.body.style.overflow = '';
+    setInert(false);
+  }
+
+  function setInert(on) {
+    document.querySelectorAll('main, footer').forEach(el => {
+      if (on) { el.setAttribute('inert', ''); } else { el.removeAttribute('inert'); }
+    });
   }
 
   if (menuToggle && mainNav) {
@@ -25,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       menuToggle.setAttribute('aria-expanded', String(isActive));
       if (navOverlay) navOverlay.classList.toggle('active');
       document.body.style.overflow = isActive ? 'hidden' : '';
+      setInert(isActive);
     });
 
     if (navOverlay) {
@@ -69,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = i.querySelector('.faq-question');
         if (btn) btn.setAttribute('aria-expanded', 'false');
       });
+
 
       // Open clicked (if it was closed)
       if (!isActive) {

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# AI crawlers explicitly welcome - this practice wants to be findable
+# and citable by answer engines and assistants.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://aureliabridges.com/sitemap.xml
