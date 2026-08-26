@@ -1033,8 +1033,11 @@ p:last-child {
 }
 
 .faq-answer {
+  /* Closed, one line of the answer stays visible as a preview; open, the
+     row grows to fit. minmax keeps the peek fixed while the fr part
+     animates. */
   display: grid;
-  grid-template-rows: 0fr;
+  grid-template-rows: minmax(1.9rem, 0fr);
   overflow: hidden;
   transition: grid-template-rows 0.35s ease;
 }
@@ -1057,7 +1060,18 @@ p:last-child {
 }
 
 .faq-item.active .faq-answer {
-  grid-template-rows: 1fr;
+  grid-template-rows: minmax(1.9rem, 1fr);
+}
+
+/* The preview fades out rather than cutting through the middle of a line. */
+.faq-answer-inner {
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+}
+
+.faq-item.active .faq-answer-inner {
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 /* --- Contact Page --- */
