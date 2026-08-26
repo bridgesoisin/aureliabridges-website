@@ -1742,3 +1742,66 @@ a.area-card:focus-visible {
 a.area-card h3 {
   color: var(--color-primary);
 }
+
+/* --- Opening hours --- */
+.hours-block {
+  max-width: var(--content-max);
+  margin: 0 auto 3rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.hours-block h3 {
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table th,
+.hours-table td {
+  text-align: left;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 400;
+}
+
+.hours-table th {
+  color: var(--color-text);
+  width: 45%;
+}
+
+.hours-table td {
+  color: var(--color-text-light);
+  font-variant-numeric: tabular-nums;
+}
+
+.hours-table tr:last-child th,
+.hours-table tr:last-child td {
+  border-bottom: none;
+}
+
+.hours-table .closed {
+  color: var(--color-text-lighter);
+}
+
+.hours-note {
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.footer-hours {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.directions-link {
+  font-weight: 600;
+}
