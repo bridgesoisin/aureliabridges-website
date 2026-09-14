@@ -1752,3 +1752,12 @@ button:focus-visible {
 .directions-link {
   font-weight: 600;
 }
+
+/* --- Availability status ---
+   A quiet statement of fact, not a badge. Same type scale as surrounding
+   body copy, theme colour for weight, no pill/dot/background. */
+.availability {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
