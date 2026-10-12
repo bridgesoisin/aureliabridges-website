@@ -973,6 +973,14 @@ p:last-child {
   max-height: 500px;
 }
 
+.room-showcase--portrait {
+  max-width: 460px;
+}
+
+.room-showcase--portrait img {
+  max-height: none;
+}
+
 .room-caption {
   background: var(--color-card);
   padding: 1rem 1.5rem;
@@ -1481,6 +1489,10 @@ button:focus-visible {
 
   .room-showcase img {
     max-height: 350px;
+  }
+
+  .room-showcase--portrait img {
+    max-height: none;
   }
 
   .contact-form {
