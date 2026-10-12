@@ -1663,13 +1663,6 @@ button:focus-visible {
   }
 }
 
-.last-reviewed {
-  font-size: 0.85rem;
-  color: var(--color-text-lighter);
-  text-align: center;
-  margin-top: 2rem;
-}
-
 /* --- Crisis heading (promoted from h3 to h2 for document outline) --- */
 .crisis-heading {
   font-size: 1.35rem;
